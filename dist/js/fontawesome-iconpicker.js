@@ -606,9 +606,6 @@
                     if (!c._isEventInsideIconpicker(a) && !c.isInline()) {
                         c.hide();
                     }
-                    a.stopPropagation();
-                    a.preventDefault();
-                    return false;
                 });
             }
             return false;

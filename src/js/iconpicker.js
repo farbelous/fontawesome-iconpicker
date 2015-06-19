@@ -338,9 +338,6 @@
                         if (!_self._isEventInsideIconpicker(e) && !_self.isInline()) {
                             _self.hide();
                         }
-                        e.stopPropagation();
-                        e.preventDefault();
-                        return false;
                     });
                 }
 
