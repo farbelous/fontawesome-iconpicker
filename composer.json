@@ -1,0 +1,29 @@
+{
+  "name": "itsjavi/fontawesome-iconpicker",
+  "description": "Font Awesome Icon Picker plugin for Twitter Bootstrap",
+  "version": "1.2.1",
+  "keywords": [
+    "bootstrap",
+    "fontawesome",
+    "iconpicker",
+    "popover",
+    "picker"
+  ],
+  "homepage": "https://itsjavi.com/fontawesome-iconpicker/",
+  "minimum-stability": "stable",
+  "repositories": [{
+    "type": "vcs",
+    "url": "https://github.com/itsjavi/fontawesome-iconpicker"
+  }],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Javi Aguilar",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/itsjavi/fontawesome-iconpicker/issues",
+    "source": "git@github.com:itsjavi/fontawesome-iconpicker.git"
+  }
+}
