@@ -339,6 +339,7 @@
                     $doc.on('mouseup' + _eventNs, function(e) {
                         if (!_self._isEventInsideIconpicker(e) && !_self.isInline()) {
                             _self.hide();
+                            return;
                         }
                         e.stopPropagation();
                         e.preventDefault();

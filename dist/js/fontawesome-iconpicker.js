@@ -607,6 +607,7 @@
                 b.on("mouseup" + d, function(a) {
                     if (!c._isEventInsideIconpicker(a) && !c.isInline()) {
                         c.hide();
+                        return;
                     }
                     a.stopPropagation();
                     a.preventDefault();
