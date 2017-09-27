@@ -1,10 +1,10 @@
 /*!
  * Font Awesome Icon Picker
- * https://itsjavi.com/fontawesome-iconpicker/
+ * https://farbelous.github.io/fontawesome-iconpicker/
  *
  * Originally written by (c) 2016 Javi Aguilar
  * Licensed under the MIT License
- * https://github.com/itsjavi/fontawesome-iconpicker/blob/master/LICENSE
+ * https://github.com/farbelous/fontawesome-iconpicker/blob/master/LICENSE
  *
  */
 var FA_CSS_RULES = null;
@@ -52,7 +52,7 @@ function getRemoteCssRules(stylesheet_uri) {
 }
 
 $(function () {
-    $('.iconpicker').iconpicker({
+    $('.iconpicker').html('').iconpicker({
         showFooter: true,
         templates: {
             buttons: '<div></div>',
