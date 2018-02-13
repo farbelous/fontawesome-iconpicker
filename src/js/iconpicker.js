@@ -62,10 +62,6 @@
             this.container.addClass('iconpicker-container');
 
             if (this.isDropdownMenu()) {
-                // if you try to click the dropdown, it is closed, because of that
-                // we'll hide some picker controls
-                this.options.templates.search = false;
-                this.options.templates.buttons = false;
                 this.options.placement = 'inline';
             }
 
