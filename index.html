@@ -5,6 +5,7 @@
         <title>Font Awesome Icon Picker plugin for Bootstrap</title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet"> -->
         <link href="dist/css/fontawesome-iconpicker.min.css" rel="stylesheet">
         <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
         <!--[if lt IE 9]>
@@ -213,6 +214,7 @@ You can use Font Awesome or another font icon set of your choice (icon options a
                     
                     $('.icp-glyphs').iconpicker({
                         title: 'Prepending glypghicons',
+                        // fontAwesome5: true,
                         icons: $.merge(['glyphicon-home', 'glyphicon-repeat', 'glyphicon-search',
                             'glyphicon-arrow-left', 'glyphicon-arrow-right', 'glyphicon-star'], $.iconpicker.defaultOptions.icons),
                         fullClassFormatter: function(val){
@@ -232,6 +234,7 @@ You can use Font Awesome or another font icon set of your choice (icon options a
                         showFooter: true,
                         // note that this is ignored cause we have an accept button:
                         hideOnSelect: true,
+                        // fontAwesome5: true,
                         templates: {
                             footer: '<div class="popover-footer">' +
                                     '<div style="text-align:left; font-size:12px;">Placements: \n\

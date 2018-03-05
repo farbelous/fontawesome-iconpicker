@@ -50,7 +50,14 @@
             this.options = $.extend({}, Iconpicker.defaultOptions, this.element.data(), options);
             this.options.templates = $.extend({}, Iconpicker.defaultOptions.templates, this.options.templates);
             this.options.originalPlacement = this.options.placement;
-
+            if (this.options.fontAwesome5) {
+                this.options.fullClassFormatter = function(icon) {
+                    return icon;
+                };
+                if (options.icons === undefined) {
+                    this.options.icons = Iconpicker.fontAwesome5Icons.icons;
+                }
+            }
             // Iconpicker container element
             this.container = (_helpers.isElement(this.options.container) ? $(this.options.container) : false);
             if (this.container === false) {
@@ -129,6 +136,7 @@
             animation: true, // fade in/out on show/hide ?
             //hide iconpicker automatically when a value is picked. it is ignored if mustAccept is not false and the accept button is visible
             hideOnSelect: false,
+            fontAwesome5: false,
             showFooter: false,
             searchInFooter: false, // If true, the search will be added to the footer instead of the title
             mustAccept: false, // only applicable when there's an iconpicker-btn-accept button in the popover footer
@@ -931,4 +939,5 @@
             'fa-y-combinator-square', 'fa-yahoo', 'fa-yc', 'fa-yc-square', 'fa-yelp', 'fa-yen', 'fa-yoast', 'fa-youtube',
             'fa-youtube-play', 'fa-youtube-square'
         ];
+        Iconpicker.fontAwesome5Icons = //###REPLACE-WITH-FONT-AWESOME-5-FONTS###
     }));
