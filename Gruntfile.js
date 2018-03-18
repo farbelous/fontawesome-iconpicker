@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         download: {
             somefile: {
-                src: ['https://raw.githubusercontent.com/FortAwesome/Font-Awesome/gh-pages/icons.yml'],
+                src: ['https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/advanced-options/metadata/icons.yml'],
                 dest: tempIconsFile
             },
         },
@@ -19,14 +19,21 @@ module.exports = function(grunt) {
                             icons: []
                         };
                         sourceJSON = JSON.parse(sourceJSON);
-                        sourceJSON.icons.forEach(function(ele) {
-                            let icon = 'fa-' + ele.id;
-                            if (ele.categories[0].startsWith('Brand')) {
-                                icon = 'fab ' + icon;
-                            } else {
-                                icon = 'fas ' + icon;
-                            }
-                            targetJSON.icons.push(icon);
+                        Object.keys(sourceJSON).forEach(function(key) {
+                            let ele = sourceJSON[key];
+                            let icon = 'fa-' + key;
+                            ele.styles.forEach(function(style) {
+                                style = style.toLowerCase();
+                                if (style.startsWith('brand')) {
+                                    targetJSON.icons.push('fab ' + icon);
+                                } else if (style.startsWith('solid')) {
+                                    targetJSON.icons.push('fas ' + icon);
+                                } else if (style.startsWith('regular')) {
+                                    targetJSON.icons.push('far ' + icon);
+                                } else if (style.startsWith('light')) {
+                                    targetJSON.icons.push('fal ' + icon);
+                                }
+                            });
                         });
                         grunt.file.write(dest, JSON.stringify(targetJSON));
                     }
@@ -46,7 +53,7 @@ module.exports = function(grunt) {
                 options: {
                     replacements: [{
                         pattern: '//###REPLACE-WITH-FONT-AWESOME-5-FONTS###',
-                        replacement: "<%= grunt.file.read('" + tempIconsFile + "') %>;"
+                        replacement: "<%= grunt.file.read('" + tempIconsFile + "') %>"
                     }]
                 }
             }
