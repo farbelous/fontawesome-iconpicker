@@ -1,3 +1,12 @@
+/*!
+ * Font Awesome Icon Picker
+ * https://farbelous.github.io/fontawesome-iconpicker/
+ *
+ * Originally written by (c) 2016 Javi Aguilar
+ * Licensed under the MIT License
+ * https://github.com/farbelous/fontawesome-iconpicker/blob/master/LICENSE
+ *
+ */
 (function(a) {
     if (typeof define === "function" && define.amd) {
         define([ "jquery" ], a);
@@ -7,6 +16,16 @@
 })(function(a) {
     a.ui = a.ui || {};
     var b = a.ui.version = "1.12.1";
+    /*!
+     * jQuery UI Position 1.12.1
+     * http://jqueryui.com
+     *
+     * Copyright jQuery Foundation and other contributors
+     * Released under the MIT license.
+     * http://jquery.org/license
+     *
+     * http://api.jqueryui.com/position/
+     */
     (function() {
         var b, c = Math.max, d = Math.abs, e = /left|center|right/, f = /top|center|bottom/, g = /[\+\-]\d+(\.[\d]+)?%?/, h = /^\w+/, i = /%$/, j = a.fn.pos;
         function k(a, b, c) {
