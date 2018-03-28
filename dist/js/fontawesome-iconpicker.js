@@ -401,8 +401,6 @@
         }
         this.container.addClass("iconpicker-container");
         if (this.isDropdownMenu()) {
-            this.options.templates.search = false;
-            this.options.templates.buttons = false;
             this.options.placement = "inline";
         }
         this.input = this.element.is("input,textarea") ? this.element.addClass("iconpicker-input") : false;
