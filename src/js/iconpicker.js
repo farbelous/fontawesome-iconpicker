@@ -233,8 +233,6 @@
                         // only hide when the accept button is not present
                         _self.hide();
                     }
-                    e.preventDefault();
-                    return false;
                 };
 
                 for (var i in this.options.icons) {
@@ -345,13 +343,8 @@
                         if (!_self._isEventInsideIconpicker(e) && !_self.isInline()) {
                             _self.hide();
                         }
-                        e.stopPropagation();
-                        e.preventDefault();
-                        return false;
                     });
                 }
-
-                return false;
             },
             _unbindElementEvents: function() {
                 this.popover.off('.iconpicker');

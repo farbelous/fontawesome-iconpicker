@@ -534,8 +534,6 @@
                 if (b.options.hideOnSelect && b.options.mustAccept === false) {
                     b.hide();
                 }
-                c.preventDefault();
-                return false;
             };
             for (var d in this.options.icons) {
                 if (typeof this.options.icons[d].title === "string") {
@@ -619,12 +617,8 @@
                     if (!c._isEventInsideIconpicker(a) && !c.isInline()) {
                         c.hide();
                     }
-                    a.stopPropagation();
-                    a.preventDefault();
-                    return false;
                 });
             }
-            return false;
         },
         _unbindElementEvents: function() {
             this.popover.off(".iconpicker");
