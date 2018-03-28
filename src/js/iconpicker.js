@@ -828,5 +828,8 @@
         };
 
         // List of all Font Awesome icons without class prefix
-        Iconpicker.defaultOptions = $.extend(Iconpicker.defaultOptions, //###REPLACE-WITH-FONT-AWESOME-5-FONTS###);
-        }));
+        Iconpicker.defaultOptions = $.extend(
+            Iconpicker.defaultOptions,
+            //###REPLACE-WITH-FONT-AWESOME-5-FONTS###
+        );
+    }));
